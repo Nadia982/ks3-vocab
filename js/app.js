@@ -98,9 +98,16 @@ function getNewQuestion() {
         questionText.appendChild(img);
   }
 
+
   setTimeout(()=>{ read(currentQuestion.q)}, 400);
 
   definitionText.innerHTML = currentQuestion.definition;
+  if (currentQuestion.hasOwnProperty("example")) {
+    const example = document.createElement("p");
+    example.innerHTML = `<br/><em>Example</em>: ${currentQuestion.example}`;
+    definitionText.appendChild(example);
+  }
+
   questionsAskedList.push(currentQuestion);
 
   readBtn.addEventListener("click", () => {
