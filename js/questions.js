@@ -147,14 +147,16 @@ const questions = [
     options: ["yes", "no"],
     a: 0,
   },
-  // {
-  //   id: 16,
-  //   q: "",
-  //   definition: "",
-  //   example: "",
-  //   options: ["yes", "no"],
-  //   a: 0,
-  // },
+  {
+    id: 16,
+    q: "anaemic",
+    definition:
+      "Lacking enough iron, which can make a person feel tired and weak.",
+    example:
+      "The doctor said she was anaemic and needed to eat more iron-rich foods",
+    options: ["yes", "no"],
+    a: 0,
+  },
   // {
   //   id: 17,
   //   q: "",
