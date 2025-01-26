@@ -1,23 +1,23 @@
 const questions = [
-  {
-    id: 0,
-    q: "onus",
-    example: "The onus is on the captain to lead the team to victory.",
-    definition: "A responsibility or duty that someone is expected to take on.",
-    options: ["yes", "no"],
-    a: 0,
-  },
-  {
-    id: 1,
-    q: "gnawing",
-    // pronunciation: "",
-    definition:
-      "Biting or chewing something repeatedly, often to wear it down or break it apart. Can also mean a constant, annoying pain or feeling, like something biting or chewing at you.",
-    example:
-      "The gnawing hunger in my stomach made it difficult to concentrate on anything else.",
-    options: ["yes", "no"],
-    a: 0,
-  },
+  // {
+  //   id: 0,
+  //   q: "onus",
+  //   example: "The onus is on the captain to lead the team to victory.",
+  //   definition: "A responsibility or duty that someone is expected to take on.",
+  //   options: ["yes", "no"],
+  //   a: 0,
+  // },
+  // {
+  //   id: 1,
+  //   q: "gnawing",
+  //   // pronunciation: "",
+  //   definition:
+  //     "Biting or chewing something repeatedly, often to wear it down or break it apart. Can also mean a constant, annoying pain or feeling, like something biting or chewing at you.",
+  //   example:
+  //     "The gnawing hunger in my stomach made it difficult to concentrate on anything else.",
+  //   options: ["yes", "no"],
+  //   a: 0,
+  // },
   {
     id: 2,
     q: "rind",
@@ -37,35 +37,35 @@ const questions = [
     options: ["yes", "no"],
     a: 0,
   },
-  {
-    id: 4,
-    q: "senile",
-    example:
-      "The elderly man was becoming somewhat senile, often forgetting where he left his keys.",
-    definition:
-      "Someone who has lost the ability to think clearly or remember things, usually because of old age.",
-    options: ["yes", "no"],
-    a: 0,
-  },
-  {
-    id: 5,
-    q: "slander",
-    definition:
-      "saying something untrue about someone to harm their reputation.",
-    example: "Mark's false claim that Emma cheated in her exam was slander.",
-    options: ["yes", "no"],
-    a: 0,
-  },
-  {
-    id: 6,
-    q: "vessel",
-    definition:
-      "something that carries something else, like a ship that carries people or goods, a blood vessel that carries blood in the body, or a drinking container like a mug or cup.",
-    example:
-      "The large vessel carried thousands of passengers across the ocean.",
-    options: ["yes", "no"],
-    a: 0,
-  },
+  // {
+  //   id: 4,
+  //   q: "senile",
+  //   example:
+  //     "The elderly man was becoming somewhat senile, often forgetting where he left his keys.",
+  //   definition:
+  //     "Someone who has lost the ability to think clearly or remember things, usually because of old age.",
+  //   options: ["yes", "no"],
+  //   a: 0,
+  // },
+  // {
+  //   id: 5,
+  //   q: "slander",
+  //   definition:
+  //     "saying something untrue about someone to harm their reputation.",
+  //   example: "Mark's false claim that Emma cheated in her exam was slander.",
+  //   options: ["yes", "no"],
+  //   a: 0,
+  // },
+  // {
+  //   id: 6,
+  //   q: "vessel",
+  //   definition:
+  //     "something that carries something else, like a ship that carries people or goods, a blood vessel that carries blood in the body, or a drinking container like a mug or cup.",
+  //   example:
+  //     "The large vessel carried thousands of passengers across the ocean.",
+  //   options: ["yes", "no"],
+  //   a: 0,
+  // },
   // {
   //   id: 7,
   //   q: "permit (noun) - note that the stress is on the first syllable",
@@ -74,41 +74,41 @@ const questions = [
   //   options: ["yes", "no"],
   //   a: 0,
   // },
-  {
-    id: 8,
-    q: "permit (verb) - note that the stress is on the second syllable",
-    definition: "To allow something to happen.",
-    example:
-      "The teacher does not permit students to use their phones in class.",
-    options: ["yes", "no"],
-    a: 0,
-  },
-  {
-    id: 9,
-    q: "douse",
-    definition: "To drench or soak someone or something in liquid.",
-    example: "She had to douse the fire with water to stop it from spreading.",
-    options: ["yes", "no"],
-    a: 0,
-  },
-  {
-    id: 10,
-    q: "sane",
-    definition: "Mentally healthy; of sound mind",
-    example:
-      "After a long holiday in a sunny country, I finally feel sane again.",
-    options: ["yes", "no"],
-    a: 0,
-  },
-  {
-    id: 11,
-    q: "corrugated",
-    definition:
-      "Having a surface that is wavy or ridged, like the folds of a cardboard box.",
-    example: "The roof of the shed was made of corrugated metal sheets.",
-    options: ["yes", "no"],
-    a: 0,
-  },
+  // {
+  //   id: 8,
+  //   q: "permit (verb) - note that the stress is on the second syllable",
+  //   definition: "To allow something to happen.",
+  //   example:
+  //     "The teacher does not permit students to use their phones in class.",
+  //   options: ["yes", "no"],
+  //   a: 0,
+  // },
+  // {
+  //   id: 9,
+  //   q: "douse",
+  //   definition: "To drench or soak someone or something in liquid.",
+  //   example: "She had to douse the fire with water to stop it from spreading.",
+  //   options: ["yes", "no"],
+  //   a: 0,
+  // },
+  // {
+  //   id: 10,
+  //   q: "sane",
+  //   definition: "Mentally healthy; of sound mind",
+  //   example:
+  //     "After a long holiday in a sunny country, I finally feel sane again.",
+  //   options: ["yes", "no"],
+  //   a: 0,
+  // },
+  // {
+  //   id: 11,
+  //   q: "corrugated",
+  //   definition:
+  //     "Having a surface that is wavy or ridged, like the folds of a cardboard box.",
+  //   example: "The roof of the shed was made of corrugated metal sheets.",
+  //   options: ["yes", "no"],
+  //   a: 0,
+  // },
   {
     id: 12,
     q: "apocryphal",
