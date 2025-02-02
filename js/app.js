@@ -1,5 +1,7 @@
 console.clear();
-function $(type) {	return document.querySelector(type);}
+function $(type) {
+  return document.querySelector(type);
+}
 let voices = [];
 let synth = window.speechSynthesis; //Initialise SpeechSythesis API
 
@@ -30,13 +32,11 @@ const resultBox = $(".result-box"); // result box
 const nextButton = $(".next-btn"); // next button
 const showDefinitionButton = document.getElementById("show-definition"); // show definition button
 // const totalAvailableQuestions= $(".total-available-questions"); // total available questions
-// const questionLimit = 5;
+const questionLimit = 15;
 const didYouKnowContainer = $(".did-you-know-container");
 const answerMessage = $(".answer-message");
-const questionLimit = questions.length;
-const questionsAskedContainer = $(
-  ".questions-asked-container"
-); // questions asked container (results screen)
+// const questionLimit = questions.length;
+const questionsAskedContainer = $(".questions-asked-container"); // questions asked container (results screen)
 let yes;
 
 let questionCounter = 0;
@@ -83,10 +83,10 @@ function getNewQuestion() {
     utterThis.voice = englishMaleVoice;
     utterThis.pitch = 0.7;
     utterThis.volume = 0.9;
-    utterThis.rate = 0.9;  
-    
+    utterThis.rate = 0.9;
+
     const reading = window.speechSynthesis.speak(utterThis);
-      };
+  };
 
   const questionIndex = availableQuestions[questionCounter];
   currentQuestion = questionIndex;
@@ -95,11 +95,12 @@ function getNewQuestion() {
   if (currentQuestion.hasOwnProperty("img")) {
     const img = document.createElement("img");
     img.src = currentQuestion.img;
-        questionText.appendChild(img);
+    questionText.appendChild(img);
   }
 
-
-  setTimeout(()=>{ read(currentQuestion.q)}, 400);
+  setTimeout(() => {
+    read(currentQuestion.q);
+  }, 400);
 
   definitionText.innerHTML = currentQuestion.definition;
   if (currentQuestion.hasOwnProperty("example")) {
@@ -167,46 +168,49 @@ function getNewQuestion() {
 
 function toggleDefinitionButtonText() {
   showDefinitionButton.classList.toggle("active");
-  
+
   if (!showDefinitionButton.classList.contains("active")) {
-   
     showDefinitionButton.innerText = "Show definition";
     cancelSpeech();
   } else if (showDefinitionButton.classList.contains("active")) {
     showDefinitionButton.innerText = "Hide definition";
-    setTimeout(()=>{
-      const utterThis = new SpeechSynthesisUtterance(currentQuestion.definition);
+    setTimeout(() => {
+      const utterThis = new SpeechSynthesisUtterance(
+        currentQuestion.definition
+      );
       utterThis.voice = englishMaleVoice;
       utterThis.pitch = 0.7;
       utterThis.volume = 0.9;
       utterThis.rate = 0.9;
-           
+
       utterThis.addEventListener("end", (e) => {
-        console.log(`Utterance has finished being spoken after ${e.elapsedTime} seconds`);
-      }
-      
-    );
-    const words = currentQuestion.definition.length;
-        const timeToWait = words*50;
-        // console.log(`currentQuestion.definition.length is ${currentQuestion.definition.length}`);
-      
-        setTimeout(() => {if (!didYouKnowContainer.classList.contains("keep-hidden")){ 
+        console.log(
+          `Utterance has finished being spoken after ${e.elapsedTime} seconds`
+        );
+      });
+      const words = currentQuestion.definition.length;
+      const timeToWait = words * 50;
+      // console.log(`currentQuestion.definition.length is ${currentQuestion.definition.length}`);
+
+      setTimeout(() => {
+        if (!didYouKnowContainer.classList.contains("keep-hidden")) {
           didYouKnowContainer.classList.remove("hide");
           showDefinitionButton.classList.add("hide");
-          }}, timeToWait );
-        yes.focus();
-     const reading = window.speechSynthesis.speak(utterThis);
-  },200)
         }
+      }, timeToWait);
+      yes.focus();
+      const reading = window.speechSynthesis.speak(utterThis);
+    }, 200);
+  }
 }
 
 function showHideDefinition() {
   yes = $(".yes");
   const no = $(".no");
-    definitionText.classList.toggle("hide");
-    
+  definitionText.classList.toggle("hide");
+
   toggleDefinitionButtonText();
-  
+
   yes.addEventListener("keydown", (e) => {
     if (e.keyCode == "39") {
       no.focus();
@@ -232,11 +236,9 @@ function getResult(element) {
   didYouKnowContainer.classList.add("hide");
   didYouKnowContainer.classList.add("keep-hidden");
   const id = parseInt(element.id);
-  ;
-
   //get the answer by comparing the id of the clicked option
   if (id === currentQuestion.a) {
-    yourAnswersList.push("yes")
+    yourAnswersList.push("yes");
     answerMessage.innerHTML = `<p>You selected that you <em>know</em> the definition for ${currentQuestion.q}. Click the "Next" button below to go to the next question.</p>`;
     //     // add green colour if user selects correct option
     element.classList.add("correct");
@@ -275,7 +277,6 @@ function updateAnswerIndicator(markType) {
 }
 
 function next() {
-  
   cancelSpeech();
   if (questionCounter >= questionLimit) {
     quizOver();
@@ -327,11 +328,11 @@ function displayQuestions() {
     translationCell.innerHTML = questionsAskedList[i].definition;
     translationCell.setAttribute("data-cell", "Translation: ");
 
-      // Column 4 - create a table cell to show if the given answer was right or wrong
+    // Column 4 - create a table cell to show if the given answer was right or wrong
     const resultCell = document.createElement("td");
 
-    if (yourAnswersList[i] === "yes"){
-        resultCell.innerHTML =
+    if (yourAnswersList[i] === "yes") {
+      resultCell.innerHTML =
         "<img src='./images/correct.png' alt = 'correct' width='30'/>";
       resultCell.classList.add("correct");
     } else {
@@ -361,7 +362,6 @@ function resetQuiz() {
   questionsAskedList = [];
   yourAnswersList = [];
   removeQuestions();
-  
 }
 
 function tryAgainQuiz() {
