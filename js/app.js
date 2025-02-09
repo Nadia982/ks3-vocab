@@ -1,4 +1,6 @@
 console.clear();
+
+let category = "unknown";
 function $(type) {
   return document.querySelector(type);
 }
@@ -19,6 +21,7 @@ const cancelSpeech = () => {
 const englishMaleVoice = voices.find(
   (voice) => voice.name === "Google UK English Male"
 );
+
 const readBtn = $("#read-btn");
 const body = $("body");
 const questionNumber = $(".question-number"); //question number appears here
@@ -32,16 +35,17 @@ const resultBox = $(".result-box"); // result box
 const nextButton = $(".next-btn"); // next button
 const showDefinitionButton = document.getElementById("show-definition"); // show definition button
 // const totalAvailableQuestions= $(".total-available-questions"); // total available questions
-const questionLimit = 15;
+let questionLimit = 10;
+// let questionLimit = availableQuestions.length;
 const didYouKnowContainer = $(".did-you-know-container");
 const answerMessage = $(".answer-message");
-// const questionLimit = questions.length;
 const questionsAskedContainer = $(".questions-asked-container"); // questions asked container (results screen)
 let yes;
 
 let questionCounter = 0;
 let currentQuestion;
 let availableQuestions = [];
+
 let availableOptions = [];
 let correctAnswers = 0;
 let attempt = 0;
@@ -49,13 +53,37 @@ let questionsAskedList = [];
 let yourAnswersList = [];
 
 // add the questions to the availQuestions array
-function setAvailableQuestions() {
-  let questionIndices = [...Array(questions.length).keys()];
-  questionIndices = questionIndices.sort((a, b) => 0.5 - Math.random());
+// function setAvailableQuestions() {
+//   let questionIndices = [...Array(questions.length).keys()];
+//   questionIndices = questionIndices.filter(
+//     (index) => questions[index].category === "maps"
+//   );
+//   questionIndices = questionIndices.sort((a, b) => 0.5 - Math.random());
+//   for (let item of questionIndices) {
+//     availableQuestions.push(questions[item]);
+//   }
+// }
 
-  for (let item of questionIndices) {
-    availableQuestions.push(questions[item]);
+function setAvailableQuestions() {
+  console.log("Original questions array:", questions);
+  availableQuestions = questions.filter((q) => q.category === category);
+  console.log("Filtered questions:", availableQuestions);
+
+  if (availableQuestions.length === 0) {
+    console.error("No questions found with the category 'maps'.");
+    alert("No questions available in the selected category.");
+    return;
   }
+
+  // Shuffle the filtered questions
+  for (let i = availableQuestions.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [availableQuestions[i], availableQuestions[j]] = [
+      availableQuestions[j],
+      availableQuestions[i],
+    ];
+  }
+  questionLimit = availableQuestions.length;
 }
 
 function resetDefinitionButton() {
@@ -65,6 +93,39 @@ function resetDefinitionButton() {
 let read;
 //set question number, question text and answer options - line 35 to 83
 function getNewQuestion() {
+  if (availableQuestions.length === 0) {
+    console.error("No available questions to display.");
+    alert("No more questions available.");
+    return;
+  }
+  currentQuestion = availableQuestions[questionCounter];
+  questionText.innerHTML = currentQuestion.q;
+
+  const questionIndex = availableQuestions[questionCounter];
+  if (!questionIndex) {
+    console.error(`Invalid question at index ${questionCounter}`);
+    return;
+  }
+
+  // currentQuestion = questionIndex;
+
+  // Ensure `currentQuestion` has the required properties
+  if (!currentQuestion.q || !Array.isArray(currentQuestion.options)) {
+    console.error("Question is missing required properties (q, options).");
+    return;
+  }
+
+  questionText.innerHTML = currentQuestion.q;
+
+  if (currentQuestion.hasOwnProperty("img")) {
+    const img = document.createElement("img");
+    img.src = currentQuestion.img;
+    questionText.appendChild(img);
+  }
+
+  definitionText.innerHTML =
+    currentQuestion.definition || "No definition provided.";
+
   didYouKnowContainer.classList.remove("keep-hidden");
   didYouKnowContainer.classList.add("hide");
   answerMessage.classList.add("hide");
@@ -88,7 +149,7 @@ function getNewQuestion() {
     const reading = window.speechSynthesis.speak(utterThis);
   };
 
-  const questionIndex = availableQuestions[questionCounter];
+  // const questionIndex = availableQuestions[questionCounter];
   currentQuestion = questionIndex;
   //set question text
   questionText.innerHTML = currentQuestion.q;
@@ -103,12 +164,6 @@ function getNewQuestion() {
   }, 400);
 
   definitionText.innerHTML = currentQuestion.definition;
-  if (currentQuestion.hasOwnProperty("example")) {
-    const example = document.createElement("p");
-    example.innerHTML = `<br/><em>Example</em>: ${currentQuestion.example}`;
-    definitionText.appendChild(example);
-  }
-
   questionsAskedList.push(currentQuestion);
 
   readBtn.addEventListener("click", () => {
@@ -231,36 +286,34 @@ function showHideDefinition() {
     }
   });
 }
-
+function next() {
+  cancelSpeech();
+  if (questionCounter >= questionLimit) {
+    quizOver();
+  } else {
+    getNewQuestion();
+    resetDefinitionButton();
+  }
+}
 function getResult(element) {
   didYouKnowContainer.classList.add("hide");
   didYouKnowContainer.classList.add("keep-hidden");
   const id = parseInt(element.id);
-  //get the answer by comparing the id of the clicked option
   if (id === currentQuestion.a) {
     yourAnswersList.push("yes");
-    answerMessage.innerHTML = `<p>You selected that you <em>know</em> the definition for ${currentQuestion.q}. Click the "Next" button below to go to the next question.</p>`;
-    //     // add green colour if user selects correct option
     element.classList.add("correct");
-    //     //add a tick mark to the answer indicator
     updateAnswerIndicator("correct");
     correctAnswers++;
   } else {
     yourAnswersList.push("no");
-    answerMessage.innerHTML = `<p>You selected that you <em>do not know</em> the definition for ${currentQuestion.q}. Click the "Next" button below to go to the next question.</p>`;
-    // add red colour if user selects incorrect option
     element.classList.add("incorrect");
-    //add a cross mark to the answer indicator
     updateAnswerIndicator("incorrect");
   }
   answerMessage.classList.remove("hide");
   attempt++;
-  nextButton.classList.remove("hide");
-  // definitionText.classList.remove("hide");
-  nextButton.focus();
+  setTimeout(next, 100);
 }
 
-//creating answersIndicator box, and answer indicator circles for each question
 function answersIndicator() {
   answersIndicatorContainer.innerHTML = "";
   const totalQuestion = questionLimit;
@@ -276,25 +329,12 @@ function updateAnswerIndicator(markType) {
   );
 }
 
-function next() {
-  cancelSpeech();
-  if (questionCounter >= questionLimit) {
-    quizOver();
-  } else {
-    getNewQuestion();
-    resetDefinitionButton();
-  }
-}
-
 function quizOver() {
-  //hide quizBox
   quizBox.classList.add("hide");
-  //show resultBox
   resultBox.classList.remove("hide");
   quizResult();
 }
 
-//get the quiz result
 function quizResult() {
   resultBox.querySelector(".total-score").innerHTML =
     correctAnswers + "/" + questionLimit;
@@ -397,6 +437,9 @@ function startQuiz() {
   answersIndicator();
 }
 
+console.log(questions);
 window.onload = function () {
-  homeBox.querySelector(".total-questions").innerHTML = questionLimit;
+  availableQuestions = questions.filter((q) => q.category === category);
+  homeBox.querySelector(".total-questions").innerHTML =
+    availableQuestions.length;
 };

@@ -7,27 +7,28 @@ const questions = [
   //   options: ["yes", "no"],
   //   a: 0,
   // },
-  // {
-  //   id: 1,
-  //   q: "gnawing",
-  //   // pronunciation: "",
-  //   definition:
-  //     "Biting or chewing something repeatedly, often to wear it down or break it apart. Can also mean a constant, annoying pain or feeling, like something biting or chewing at you.",
-  //   example:
-  //     "The gnawing hunger in my stomach made it difficult to concentrate on anything else.",
-  //   options: ["yes", "no"],
-  //   a: 0,
-  // },
-  // {
-  //   id: 2,
-  //   q: "rind",
-  //   example: "He grated the lemon rind and added it to the cake mixture.",
-  //   definition:
-  //     "the hard outer layer of cheese, or the tough outer skin of fruits like lemons or oranges.",
-  //   options: ["yes", "no"],
-  //   category: "unknown",
-  //   a: 0,
-  // },
+  {
+    id: 1,
+    q: "gnawing",
+    // pronunciation: "",
+    definition:
+      "Biting or chewing something repeatedly, often to wear it down or break it apart. Can also mean a constant, annoying pain or feeling, like something biting or chewing at you.",
+    example:
+      "The gnawing hunger in my stomach made it difficult to concentrate on anything else.",
+    options: ["yes", "no"],
+    category: "known",
+    a: 0,
+  },
+  {
+    id: 2,
+    q: "rind",
+    example: "He grated the lemon rind and added it to the cake mixture.",
+    definition:
+      "the hard outer layer of cheese, or the tough outer skin of fruits like lemons or oranges.",
+    options: ["yes", "no"],
+    category: "unknown",
+    a: 0,
+  },
   {
     id: 3,
     q: "defiantly",
@@ -36,6 +37,7 @@ const questions = [
     example:
       "She refused to tidy her room, crossing her arms and frowning defiantly",
     options: ["yes", "no"],
+    category: "unknown",
     a: 0,
   },
   // {
@@ -130,6 +132,7 @@ const questions = [
       "Example 1: I could hear the rustle of the wind moving through the trees. Example 2: I can rustle up some sandwiches if you’re hungry.",
     options: ["yes", "no"],
     a: 0,
+    category: "unknown",
   },
   {
     id: 14,
@@ -149,6 +152,7 @@ const questions = [
     example: "The rabbit disappeared into its burrow to hide from the fox.",
     options: ["yes", "no"],
     a: 0,
+    category: "unknown",
   },
   {
     id: 16,
@@ -158,6 +162,7 @@ const questions = [
     example:
       "The doctor said she was anaemic and needed to eat more iron-rich foods",
     options: ["yes", "no"],
+    category: "unknown",
     a: 0,
   },
   {
@@ -168,6 +173,7 @@ const questions = [
     example:
       "The dog wore a muzzle while visiting the vet to keep everyone safe.",
     options: ["yes", "no"],
+    category: "unknown",
     a: 0,
   },
   {
@@ -186,6 +192,7 @@ const questions = [
     definition: "Happening slowly over time, not all at once.",
     example: "The hill had a gradual slope, making it easy to climb.",
     options: ["yes", "no"],
+    category: "known",
     a: 0,
   },
   {
@@ -196,6 +203,7 @@ const questions = [
     example:
       "At 25, he felt he was in the prime of his life, full of energy and ideas.",
     options: ["yes", "no"],
+    category: "known",
     a: 0,
   },
   // {
@@ -205,6 +213,7 @@ const questions = [
   //     "a medical condition that affects the brain, which is more common in older age and makes it hard to remember things or think clearly.",
   //   example: "Grandma sometimes forgets things because she has dementia.",
   //   options: ["yes", "no"],
+  // category: "known",
   //   a: 0,
   // },
   // {
@@ -295,15 +304,74 @@ const questions = [
   },
   {
     id: 31,
-    q: "",
-    definition: "",
+    q: "hypothetical",
+    definition: "Imaginary or not real, used to think about what might happen.",
     example: "",
     options: ["yes", "no"],
     category: "unknown",
     a: 0,
   },
+  {
+    id: 32,
+    q: "marred",
+    definition: "Damaged or spoiled to a certain extent.",
+    example:
+      "The beauty of the painting was marred by a scratch across the canvas.",
+    options: ["yes", "no"],
+    a: 0,
+    category: "unknown",
+  },
+  {
+    id: 33,
+    q: "episode",
+    definition: "An incident or event in a series.",
+    example:
+      "The first episode of the TV programme had me laughing from start to finish.",
+    options: ["yes", "no"],
+    a: 0,
+    category: "unknown",
+  },
+  {
+    id: 34,
+    q: "mire",
+    definition:
+      "A stretch of swampy or boggy ground; a difficult or unpleasant situation.",
+    example: "His car got stuck in the mire after the heavy rain.",
+    options: ["yes", "no"],
+    a: 0,
+    category: "unknown",
+  },
+  {
+    id: 35,
+    q: "deduce",
+    definition: "To work something out by thinking logically about the facts.",
+    example:
+      "By examining the footprints in the snow, the detective was able to deduce that the thief had escaped through the back door.",
+    options: ["yes", "no"],
+    a: 0,
+    category: "unknown",
+  },
+  {
+    id: 36,
+    q: "negligible",
+    definition: "So small or unimportant that it can usually be ignored.",
+    example:
+      "The difference in size between the two objects was so negligible that it was hard to notice",
+    options: ["yes", "no"],
+    a: 0,
+    category: "unknown",
+  },
+  {
+    id: 37,
+    q: "implode",
+    definition: "When something collapses in on itself",
+    example: "The submarine imploded because it submerged to a great depth.",
+    options: ["yes", "no"],
+    category: "unknown",
+    a: 0,
+  },
   // {
-  //   id: 26,
+  //   id: 38,
   //   q: "",
   //   definition: "",
   //   example: "",
@@ -311,7 +379,7 @@ const questions = [
   //   a: 0,
   // },
   // {
-  //   id: 27,
+  //   id: 39,
   //   q: "",
   //   definition: "",
   //   example: "",
@@ -319,7 +387,7 @@ const questions = [
   //   a: 0,
   // },
   // {
-  //   id: 28,
+  //   id: 40,
   //   q: "",
   //   definition: "",
   //   example: "",
@@ -327,55 +395,7 @@ const questions = [
   //   a: 0,
   // },
   // {
-  //   id: 29,
-  //   q: "",
-  //   definition: "",
-  //   example: "",
-  //   options: ["yes", "no"],
-  //   a: 0,
-  // },
-  // {
-  //   id: 30,
-  //   q: "",
-  //   definition: "",
-  //   example: "",
-  //   options: ["yes", "no"],
-  //   a: 0,
-  // },
-  // {
-  //   id: 25,
-  //   q: "",
-  //   definition: "",
-  //   example: "",
-  //   options: ["yes", "no"],
-  //   a: 0,
-  // },
-  // {
-  //   id: 26,
-  //   q: "",
-  //   definition: "",
-  //   example: "",
-  //   options: ["yes", "no"],
-  //   a: 0,
-  // },
-  // {
-  //   id: 27,
-  //   q: "",
-  //   definition: "",
-  //   example: "",
-  //   options: ["yes", "no"],
-  //   a: 0,
-  // },
-  // {
-  //   id: 28,
-  //   q: "",
-  //   definition: "",
-  //   example: "",
-  //   options: ["yes", "no"],
-  //   a: 0,
-  // },
-  // {
-  //   id: 29,
+  //   id: 41,
   //   q: "",
   //   definition: "",
   //   example: "",
