@@ -305,8 +305,10 @@ const questions = [
   {
     id: 31,
     q: "hypothetical",
-    definition: "Imaginary or not real, used to think about what might happen.",
-    example: "",
+    definition:
+      "Something that is hypothetical is an idea or situation that is not real but is suggested to explore possibilities. In science, a hypothesis can be tested through experiments to see if it could be true.",
+    example:
+      "The professor gave a hypothetical example to explain the complex idea.",
     options: ["yes", "no"],
     category: "unknown",
     a: 0,
@@ -365,19 +367,19 @@ const questions = [
     id: 37,
     q: "implode",
     definition: "When something collapses in on itself",
-    example: "The submarine imploded because it submerged to a great depth.",
+    example: "The building will implode in a controlled demolition.",
     options: ["yes", "no"],
     category: "unknown",
     a: 0,
   },
-  // {
-  //   id: 38,
-  //   q: "",
-  //   definition: "",
-  //   example: "",
-  //   options: ["yes", "no"],
-  //   a: 0,
-  // },
+  {
+    id: 38,
+    q: "acute",
+    definition: "Something very sharp, intense or short-lived",
+    example: "I had an acute pain in my leg when I cut it.",
+    options: ["yes", "no"],
+    a: 0,
+  },
   // {
   //   id: 39,
   //   q: "",
