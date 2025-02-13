@@ -378,22 +378,26 @@ const questions = [
     definition: "Something very sharp, intense or short-lived",
     example: "I had an acute pain in my leg when I cut it.",
     options: ["yes", "no"],
+    category: "unknown",
     a: 0,
   },
-  // {
-  //   id: 39,
-  //   q: "",
-  //   definition: "",
-  //   example: "",
-  //   options: ["yes", "no"],
-  //   a: 0,
-  // },
+  {
+    id: 39,
+    q: "Accommodate",
+    definition: "To provide space or meet someone's needs.",
+    example:
+      "The stadium can accommodate thousands of football fans for the big match.",
+    options: ["yes", "no"],
+    category: "unknown",
+    a: 0,
+  },
   // {
   //   id: 40,
   //   q: "",
   //   definition: "",
   //   example: "",
   //   options: ["yes", "no"],
+  // category: "unknown",
   //   a: 0,
   // },
   // {
@@ -402,6 +406,7 @@ const questions = [
   //   definition: "",
   //   example: "",
   //   options: ["yes", "no"],
+  // category: "unknown",
   //   a: 0,
   // },
   // {
@@ -410,6 +415,7 @@ const questions = [
   //   definition: "",
   //   example: "",
   //   options: ["yes", "no"],
+  // category: "unknown",
   //   a: 0,
   // },
   // template
@@ -419,6 +425,7 @@ const questions = [
   //   definition: "",
   //   example: "",
   //   options: ["yes", "no"],
+  // category: "unknown",
   //   a: 0,
   // },
 ];
