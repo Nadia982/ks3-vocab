@@ -331,7 +331,7 @@ const questions = [
       "The first episode of the TV programme had me laughing from start to finish.",
     options: ["yes", "no"],
     a: 0,
-    category: "unknown",
+    category: "known",
   },
   {
     id: 34,
@@ -391,15 +391,16 @@ const questions = [
     category: "unknown",
     a: 0,
   },
-  // {
-  //   id: 40,
-  //   q: "",
-  //   definition: "",
-  //   example: "",
-  //   options: ["yes", "no"],
-  // category: "unknown",
-  //   a: 0,
-  // },
+  {
+    id: 40,
+    q: "copse",
+    definition: "A small group of trees.",
+    example:
+      "Alex hid behind a copse in Minecraft to avoid being chased by zombies.",
+    options: ["yes", "no"],
+    category: "unknown",
+    a: 0,
+  },
   // {
   //   id: 41,
   //   q: "",
