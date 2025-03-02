@@ -37,7 +37,7 @@ const questions = [
     example:
       "She refused to tidy her room, crossing her arms and frowning defiantly",
     options: ["yes", "no"],
-    category: "unknown",
+    category: "known",
     a: 0,
   },
   // {
@@ -120,7 +120,7 @@ const questions = [
     example:
       "The apocryphal tale of a haunted house scared the children at bedtime.",
     options: ["yes", "no"],
-    category: "unknown",
+    category: "known",
     a: 0,
   },
   {
@@ -152,7 +152,7 @@ const questions = [
     example: "The rabbit disappeared into its burrow to hide from the fox.",
     options: ["yes", "no"],
     a: 0,
-    category: "unknown",
+    category: "known",
   },
   {
     id: 16,
@@ -162,7 +162,7 @@ const questions = [
     example:
       "The doctor said she was anaemic and needed to eat more iron-rich foods",
     options: ["yes", "no"],
-    category: "unknown",
+    category: "known",
     a: 0,
   },
   {
@@ -173,7 +173,7 @@ const questions = [
     example:
       "The dog wore a muzzle while visiting the vet to keep everyone safe.",
     options: ["yes", "no"],
-    category: "unknown",
+    category: "known",
     a: 0,
   },
   {
@@ -280,7 +280,7 @@ const questions = [
     example:
       "After all the help she gave him, he acted like an ingrate and didn’t even say thank you.",
     options: ["yes", "no"],
-    category: "unknown",
+    category: "known",
     a: 0,
   },
   {
@@ -290,7 +290,7 @@ const questions = [
     example:
       "The instructions for building the model were precise, leaving no room for mistakes.",
     options: ["yes", "no"],
-    category: "unknown",
+    category: "known",
     a: 0,
   },
   {
@@ -299,7 +299,7 @@ const questions = [
     definition: "A collection of valuable things.",
     example: "The attic was a trove of old toys and forgotten treasures.",
     options: ["yes", "no"],
-    category: "unknown",
+    category: "known",
     a: 0,
   },
   {
@@ -310,7 +310,7 @@ const questions = [
     example:
       "The professor gave a hypothetical example to explain the complex idea.",
     options: ["yes", "no"],
-    category: "unknown",
+    category: "known",
     a: 0,
   },
   {
