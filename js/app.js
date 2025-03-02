@@ -35,8 +35,9 @@ const resultBox = $(".result-box"); // result box
 const nextButton = $(".next-btn"); // next button
 const showDefinitionButton = document.getElementById("show-definition"); // show definition button
 // const totalAvailableQuestions= $(".total-available-questions"); // total available questions
-let questionLimit = 10;
-// let questionLimit = availableQuestions.length;
+let questionLimit;
+questionLimit = 10;
+// questionLimit = availableQuestions.length;
 const didYouKnowContainer = $(".did-you-know-container");
 const answerMessage = $(".answer-message");
 const questionsAskedContainer = $(".questions-asked-container"); // questions asked container (results screen)
@@ -64,10 +65,13 @@ let yourAnswersList = [];
 //   }
 // }
 
+function determineNumberofQuestions() {
+  availableQuestions = questions.filter((q) => q.category.includes(category));
+  console.log(`There are ${availableQuestions.length} questions available`);
+}
+
 function setAvailableQuestions() {
-  console.log("Original questions array:", questions);
-  availableQuestions = questions.filter((q) => q.category === category);
-  console.log("Filtered questions:", availableQuestions);
+  determineNumberofQuestions();
 
   if (availableQuestions.length === 0) {
     console.error("No questions found with the category 'maps'.");
@@ -83,8 +87,9 @@ function setAvailableQuestions() {
       availableQuestions[i],
     ];
   }
-  questionLimit = availableQuestions.length;
+  questionLimit = questionLimit;
 }
+// console.log(availableQuestions.length);
 
 function resetDefinitionButton() {
   showDefinitionButton.classList.remove("active");
@@ -437,9 +442,8 @@ function startQuiz() {
   answersIndicator();
 }
 
-console.log(questions);
+// console.log(questions);
 window.onload = function () {
-  availableQuestions = questions.filter((q) => q.category === category);
-  homeBox.querySelector(".total-questions").innerHTML =
-    availableQuestions.length;
+  determineNumberofQuestions();
+  homeBox.querySelector(".total-questions").innerHTML = questionLimit;
 };
