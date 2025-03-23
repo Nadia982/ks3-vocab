@@ -36,7 +36,7 @@ const nextButton = $(".next-btn"); // next button
 const showDefinitionButton = document.getElementById("show-definition"); // show definition button
 // const totalAvailableQuestions= $(".total-available-questions"); // total available questions
 let questionLimit;
-questionLimit = 10;
+questionLimit = 15;
 // questionLimit = availableQuestions.length;
 const didYouKnowContainer = $(".did-you-know-container");
 const answerMessage = $(".answer-message");
@@ -67,7 +67,12 @@ let yourAnswersList = [];
 
 function determineNumberofQuestions() {
   availableQuestions = questions.filter((q) => q.category.includes(category));
-  console.log(`There are ${availableQuestions.length} questions available`);
+  // console.log(`There are ${availableQuestions.length} questions available`);
+  console.log(
+    `The words are ${availableQuestions.map(
+      (availableQuestion) => availableQuestion.q
+    )}`
+  );
 }
 
 function setAvailableQuestions() {
@@ -141,7 +146,7 @@ function getNewQuestion() {
   //set question number
   questionNumber.innerHTML = `Question ${
     questionCounter + 1
-  } of ${questionLimit}`;
+  } of ${displayLength()}`;
 
   //get question
   read = (text) => {
@@ -442,8 +447,15 @@ function startQuiz() {
   answersIndicator();
 }
 
+function displayLength() {
+  return availableQuestions.length < questionLimit
+    ? availableQuestions.length
+    : questionLimit;
+}
+
 // console.log(questions);
 window.onload = function () {
   determineNumberofQuestions();
-  homeBox.querySelector(".total-questions").innerHTML = questionLimit;
+  // console.log(availableQuestions);
+  homeBox.querySelector(".total-questions").innerHTML = displayLength();
 };

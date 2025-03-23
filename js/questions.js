@@ -26,7 +26,7 @@ const questions = [
     definition:
       "the hard outer layer of cheese, or the tough outer skin of fruits like lemons or oranges.",
     options: ["yes", "no"],
-    category: "unknown",
+    category: "known",
     a: 0,
   },
   {
@@ -383,7 +383,7 @@ const questions = [
   },
   {
     id: 39,
-    q: "Accommodate",
+    q: "accommodate",
     definition: "To provide space or meet someone's needs.",
     example:
       "The stadium can accommodate thousands of football fans for the big match.",
@@ -529,6 +529,105 @@ const questions = [
   //   category: "unknown",
   //   a: 0,
   // },
+
+  {
+    id: 54,
+    q: "artless",
+    definition: "Lacking skill or knowledge.",
+    example:
+      "His artless build in Minecraft was full of mistakes, but it was still fun.",
+    options: ["yes", "no"],
+    category: "unknown",
+    a: 0,
+  },
+  {
+    id: 55,
+    q: "noteworthy",
+    definition: "Important or deserving attention.",
+    example:
+      "Scoring the winning goal was a noteworthy moment in the football match.",
+    options: ["yes", "no"],
+    category: "unknown",
+    a: 0,
+  },
+  {
+    id: 56,
+    q: "schism",
+    definition: "A division or split into two parts.",
+    example:
+      "A schism formed in the Minecraft server when players disagreed on which game mode to play.",
+    options: ["yes", "no"],
+    category: "unknown",
+    a: 0,
+  },
+  {
+    id: 57,
+    q: "furrow",
+    definition: "A long, narrow groove or line.",
+    example:
+      "The farmer made a furrow in the soil before planting crops for the holiday feast.",
+    options: ["yes", "no"],
+    category: "unknown",
+    a: 0,
+  },
+  {
+    id: 58,
+    q: "uncouth",
+    definition: "Rude or lacking manners.",
+    example: "His uncouth behaviour on holiday annoyed everyone in his family.",
+    options: ["yes", "no"],
+    category: "unknown",
+    a: 0,
+  },
+  {
+    id: 59,
+    q: "dwelling",
+    definition: "A place where someone lives.",
+    example: "In Minecraft, I built a cosy dwelling out of wood and stone.",
+    options: ["yes", "no"],
+    category: "unknown",
+    a: 0,
+  },
+  {
+    id: 60,
+    q: "procure",
+    definition: "To get or obtain something.",
+    example:
+      "I had to procure a football from the store for our holiday tournament.",
+    options: ["yes", "no"],
+    category: "unknown",
+    a: 0,
+  },
+  {
+    id: 61,
+    q: "conscientious",
+    definition: "Very careful and responsible.",
+    example:
+      "He was conscientious, always working hard on his homework and ensuring he had completed it thoroughly and accurately.",
+    options: ["yes", "no"],
+    category: "unknown",
+    a: 0,
+  },
+  {
+    id: 62,
+    q: "insinuate",
+    definition: "To hint or suggest something indirectly.",
+    example:
+      "He tried to insinuate that I had cheated during the Minecraft challenge.",
+    options: ["yes", "no"],
+    category: "unknown",
+    a: 0,
+  },
+  {
+    id: 63,
+    q: "abduct",
+    definition: "To take someone away by force.",
+    example:
+      "In Roblox, players might pretend to abduct their friends as part of a game plot.",
+    options: ["yes", "no"],
+    category: "unknown",
+    a: 0,
+  },
 
   // template
   // {
