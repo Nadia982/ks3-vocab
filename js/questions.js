@@ -17,7 +17,7 @@ const questions = [
   },
   {
     id: 2,
-    q: "rind. Example: He grated the lemon rind and added it to the cake mixture.",
+    q: "rind. Example usage: he grated the lemon rind and added it to the cake mixture.",
     definition:
       "the hard outer layer of cheese, or the tough outer skin of fruits like lemons or oranges.",
     options: ["yes", "no"],
@@ -26,7 +26,7 @@ const questions = [
   },
   {
     id: 3,
-    q: "defiantly. Example: She refused to tidy her room, crossing her arms and frowning defiantly",
+    q: "defiantly. Example usage: she refused to tidy her room, crossing her arms and frowning defiantly",
     definition:
       "doing something in a bold, rebellious way to show you’re not willing to obey or agree.",
     options: ["yes", "no"],
@@ -512,7 +512,7 @@ const questions = [
     id: 56,
     q: "schism",
     definition:
-      "A division or split into two parts. Example: A schism formed in the Minecraft server when players disagreed on which game mode to play.",
+      "A division or split into two parts. Example usage: a schism formed in the Minecraft server when players disagreed on which game mode to play.",
     options: ["yes", "no"],
     category: "unknown",
     a: 0,
