@@ -1,8 +1,7 @@
 const questions = [
   // {
   //   id: 0,
-  //   q: "onus",
-  //   example: "The onus is on the captain to lead the team to victory.",
+  //   q: "onus. Example usage: The onus is on the captain to lead the team to victory.",
   //   definition: "A responsibility or duty that someone is expected to take on.",
   //   options: ["yes", "no"],
   //   a: 0,
@@ -46,10 +45,9 @@ const questions = [
   // },
   // {
   //   id: 5,
-  //   q: "slander",
+  //   q: "slander. Example usage: Mark's false claim that Emma cheated in her exam was slander.",
   //   definition:
   //     "saying something untrue about someone to harm their reputation.",
-  //   example: "Mark's false claim that Emma cheated in her exam was slander.",
   //   options: ["yes", "no"],
   //   a: 0,
   // },
@@ -65,9 +63,8 @@ const questions = [
   // },
   // {
   //   id: 7,
-  //   q: "permit (noun) - note that the stress is on the first syllable",
+  //   q: "permit (noun). Example usage: you need a permit to park your car in this area.",
   //   definition: "An official document that gives permission to do something",
-  //   example: "You need a permit to park your car in this area.",
   //   options: ["yes", "no"],
   //   a: 0,
   // },
@@ -82,37 +79,31 @@ const questions = [
   // },
   // {
   //   id: 9,
-  //   q: "douse",
+  //   q: "douse. Example usage: She had to douse the fire with water to stop it from spreading.",
   //   definition: "To drench or soak someone or something in liquid.",
-  //   example: "She had to douse the fire with water to stop it from spreading.",
   //   options: ["yes", "no"],
   //   a: 0,
   // },
   // {
   //   id: 10,
-  //   q: "sane",
+  //   q: "sane. Example usage: After a long holiday in a sunny country, I finally feel sane again.",
   //   definition: "Mentally healthy; of sound mind",
-  //   example:
-  //     "After a long holiday in a sunny country, I finally feel sane again.",
   //   options: ["yes", "no"],
   //   a: 0,
   // },
   // {
   //   id: 11,
-  //   q: "corrugated",
+  //   q: "corrugated. Example usage: The roof of the shed was made of corrugated metal sheets.",
   //   definition:
   //     "Having a surface that is wavy or ridged, like the folds of a cardboard box.",
-  //   example: "The roof of the shed was made of corrugated metal sheets.",
   //   options: ["yes", "no"],
   //   a: 0,
   // },
   {
     id: 12,
-    q: "apocryphal",
+    q: "apocryphal. Example usage: The apocryphal tale of a haunted house scared the children at bedtime.",
     definition:
       "A story or statement that is widely believed but probably not true.",
-    example:
-      "The apocryphal tale of a haunted house scared the children at bedtime.",
     options: ["yes", "no"],
     category: "known",
     a: 0,
@@ -141,20 +132,17 @@ const questions = [
   },
   {
     id: 15,
-    q: "burrow",
+    q: "burrow. Example usage: The rabbit disappeared into its burrow to hide from the fox.",
     definition: "A hole or tunnel dug by an animal to live in",
-    example: "The rabbit disappeared into its burrow to hide from the fox.",
     options: ["yes", "no"],
     a: 0,
     category: "known",
   },
   {
     id: 16,
-    q: "anaemic",
+    q: "anaemic. Example usage: the doctor said she was anaemic and needed to eat more iron-rich foods.",
     definition:
       "Lacking enough iron, which can make a person feel tired and weak.",
-    example:
-      "The doctor said she was anaemic and needed to eat more iron-rich foods",
     options: ["yes", "no"],
     category: "known",
     a: 0,
@@ -182,9 +170,8 @@ const questions = [
   },
   {
     id: 19,
-    q: "gradual",
+    q: "gradual. Example usage: The hill had a gradual slope, making it easy to climb.",
     definition: "Happening slowly over time, not all at once.",
-    example: "The hill had a gradual slope, making it easy to climb.",
     options: ["yes", "no"],
     category: "known",
     a: 0,
@@ -202,38 +189,34 @@ const questions = [
   },
   // {
   //   id: 21,
-  //   q: "dementia",
+  //   q: "dementia. Example usage: Grandma sometimes forgets things because she has dementia.",
   //   definition:
   //     "a medical condition that affects the brain, which is more common in older age and makes it hard to remember things or think clearly.",
-  //   example: "Grandma sometimes forgets things because she has dementia.",
   //   options: ["yes", "no"],
   // category: "known",
   //   a: 0,
   // },
   // {
   //   id: 22,
-  //   q: "hatch",
+  //   q: "hatch. Example usage: the chicks began to hatch from their eggs in the early morning.",
   //   definition:
   //     "To open or create an opening, or when a baby bird or reptile comes out of an egg.",
-  //   example: "The chicks began to hatch from their eggs in the early morning.",
   //   options: ["yes", "no"],
   //   a: 0,
   // },
   {
     id: 23,
-    q: "maintenance",
+    q: "maintenance. Example usage: Regular maintenance of his bike kept it running smoothly.",
     definition:
       "The act of keeping something in good condition by checking or repairing it regularly.",
-    example: "Regular maintenance of his bike kept it running smoothly.",
     options: ["yes", "no"],
     category: "known",
     a: 0,
   },
   {
     id: 24,
-    q: "logical",
+    q: "logical. Example usage: It's logical to wear a coat when it's cold outside.",
     definition: "Using clear and sensible reasoning.",
-    example: "It’s logical to wear a coat when it’s cold outside.",
     options: ["yes", "no"],
     category: "known",
     a: 0,
@@ -250,9 +233,8 @@ const questions = [
   },
   {
     id: 26,
-    q: "confound",
+    q: "confound. Example usage: the magician's tricks continued to confound the audience.",
     definition: "To surprise or confuse someone.",
-    example: "The magician’s tricks continued to confound the audience.",
     options: ["yes", "no"],
     category: "unknown",
     a: 0,
@@ -289,9 +271,8 @@ const questions = [
   },
   {
     id: 30,
-    q: "Trove",
+    q: "Trove. Example usage: the attic was a trove of old toys and forgotten treasures.",
     definition: "A collection of valuable things.",
-    example: "The attic was a trove of old toys and forgotten treasures.",
     options: ["yes", "no"],
     category: "known",
     a: 0,
@@ -329,10 +310,9 @@ const questions = [
   },
   {
     id: 34,
-    q: "mire",
+    q: "mire. Example usage: his car got stuck in the mire after the heavy rain.",
     definition:
       "A stretch of swampy or boggy ground; a difficult or unpleasant situation.",
-    example: "His car got stuck in the mire after the heavy rain.",
     options: ["yes", "no"],
     a: 0,
     category: "unknown",
@@ -359,18 +339,16 @@ const questions = [
   },
   {
     id: 37,
-    q: "implode",
+    q: "implode. Example usage: the building will implode in a controlled demolition.",
     definition: "When something collapses in on itself",
-    example: "The building will implode in a controlled demolition.",
     options: ["yes", "no"],
     category: "unknown",
     a: 0,
   },
   {
     id: 38,
-    q: "acute",
+    q: "acute. Example usage: I had an acute pain in my leg when I cut it.",
     definition: "Something very sharp, intense or short-lived",
-    example: "I had an acute pain in my leg when I cut it.",
     options: ["yes", "no"],
     category: "unknown",
     a: 0,
@@ -397,9 +375,8 @@ const questions = [
   },
   {
     id: 41,
-    q: "abandon",
+    q: "abandon. Example usage: I had to abandon my plan to move to Spain after Brexit.",
     definition: "To leave something behind or to stop doing something.",
-    example: "I had to abandon my plan to move to Spain after Brexit.",
     options: ["yes", "no"],
     category: "known",
     a: 0,
@@ -416,10 +393,9 @@ const questions = [
   },
   {
     id: 43,
-    q: "dogged",
+    q: "dogged. Example usage: she had dogged determination to finish the project",
     definition:
       "Definition 1 (adjective) never giving up; determined. E.g. 'with dogged effort, he finally scored the winning goal in football.'. Definition 2 (verb): followed, pursued or hounded. E.g. 'the project was dogged by problems from the outset.'",
-    // example: "",
     options: ["yes", "no"],
     category: "unknown",
     a: 0,
@@ -437,10 +413,9 @@ const questions = [
 
   {
     id: 45,
-    q: "confront",
+    q: "confront. Example usage: She had to confront the Ender Dragon to win her Minecraft world.",
     definition:
       "To face a problem or challenge, often by speaking to someone about the problem in a direct manner",
-    example: "She had to confront the Ender Dragon to win her Minecraft world.",
     options: ["yes", "no"],
     category: "unknown",
     a: 0,
@@ -458,9 +433,8 @@ const questions = [
   },
   {
     id: 47,
-    q: "savvy",
+    q: "savvy. Example usage: His Roblox savvy made him popular with thousands of players.",
     definition: "Having good knowledge, understanding or awareness",
-    example: "His Roblox savvy made him popular with thousands of players.",
     options: ["yes", "no"],
     category: "unknown",
     a: 0,
@@ -477,9 +451,8 @@ const questions = [
   },
   {
     id: 49,
-    q: "doleful ",
+    q: "doleful. Example usage: His doleful face showed how much he hated losing the match.",
     definition: "Very sad or sorrowful.",
-    example: "His doleful face showed how much he hated losing the match.",
     options: ["yes", "no"],
     category: "unknown",
     a: 0,
@@ -496,28 +469,24 @@ const questions = [
   },
   {
     id: 51,
-    q: "inhibit",
+    q: "inhibit. Example usage: the lag in Minecraft inhibited his ability to fight mobs.",
     definition: "to stop or slow something down.",
-    example: "The lag in Minecraft would inhibit his ability to fight mobs.",
     options: ["yes", "no"],
     category: "unknown",
     a: 0,
   },
   {
     id: 52,
-    q: "frequent (used as a verb)",
+    q: "frequent (used as a verb). Example usage: He would frequent the football pitch to practise his skills.",
     definition: "To visit a place often.",
-    example: "He would frequent the football pitch to practise his skills.",
     options: ["yes", "no"],
     category: "unknown",
     a: 0,
   },
   {
     id: 53,
-    q: "prescience",
+    q: "prescience. Example usage: He guessed the result of the football game with incredible prescience",
     definition: "Knowing something before it happens.",
-    example:
-      "He guessed the result of the football game with incredible prescience",
     options: ["yes", "no"],
     category: "unknown",
     a: 0,
@@ -525,20 +494,16 @@ const questions = [
 
   {
     id: 54,
-    q: "artless",
+    q: "artless. Example usage: His artless build in Minecraft was full of mistakes, but it was still fun.",
     definition: "Lacking skill or knowledge.",
-    example:
-      "His artless build in Minecraft was full of mistakes, but it was still fun.",
     options: ["yes", "no"],
     category: "unknown",
     a: 0,
   },
   {
     id: 55,
-    q: "noteworthy",
+    q: "noteworthy. Example usage: Scoring the winning goal was a noteworthy moment in the football match.",
     definition: "Important or deserving attention.",
-    example:
-      "Scoring the winning goal was a noteworthy moment in the football match.",
     options: ["yes", "no"],
     category: "unknown",
     a: 0,
@@ -546,9 +511,8 @@ const questions = [
   {
     id: 56,
     q: "schism",
-    definition: "A division or split into two parts.",
-    example:
-      "A schism formed in the Minecraft server when players disagreed on which game mode to play.",
+    definition:
+      "A division or split into two parts. Example: A schism formed in the Minecraft server when players disagreed on which game mode to play.",
     options: ["yes", "no"],
     category: "unknown",
     a: 0,
@@ -565,18 +529,16 @@ const questions = [
   },
   {
     id: 58,
-    q: "uncouth",
+    q: "uncouth. Example usage: his uncouth behaviour on holiday annoyed everyone in his family",
     definition: "Rude or lacking manners.",
-    example: "His uncouth behaviour on holiday annoyed everyone in his family.",
     options: ["yes", "no"],
     category: "unknown",
     a: 0,
   },
   {
     id: 59,
-    q: "dwelling",
+    q: "dwelling. Example usage: In Minecraft, I built a cosy dwelling out of wood and stone.",
     definition: "A place where someone lives.",
-    example: "In Minecraft, I built a cosy dwelling out of wood and stone.",
     options: ["yes", "no"],
     category: "unknown",
     a: 0,
@@ -593,20 +555,17 @@ const questions = [
   },
   {
     id: 61,
-    q: "conscientious",
+    q: "conscientious. Example usage: He was conscientious, always working hard on his homework and ensuring he had completed it thoroughly and accurately.",
     definition: "Very careful and responsible.",
-    example:
-      "He was conscientious, always working hard on his homework and ensuring he had completed it thoroughly and accurately.",
+
     options: ["yes", "no"],
     category: "unknown",
     a: 0,
   },
   {
     id: 62,
-    q: "insinuate",
+    q: "insinuate. Example usage: He tried to insinuate that I had cheated during the Minecraft challenge.",
     definition: "To hint or suggest something indirectly.",
-    example:
-      "He tried to insinuate that I had cheated during the Minecraft challenge.",
     options: ["yes", "no"],
     category: "unknown",
     a: 0,
@@ -623,9 +582,8 @@ const questions = [
   },
   {
     id: 65,
-    q: "Avow",
+    q: "Avow. Example usage: She avowed her love for football, never missing a single match.",
     definition: "To declare openly.",
-    example: "She avowed her love for football, never missing a single match.",
     options: ["yes", "no"],
     category: "unknown",
     a: 0,
@@ -652,9 +610,8 @@ const questions = [
   },
   {
     id: 68,
-    q: "Oblique",
+    q: "Oblique. Example usage: He took an oblique shot at goal, surprising the goalkeeper.",
     definition: "Not straightforward or at an angle.",
-    example: "He took an oblique shot at goal, surprising the goalkeeper.",
     options: ["yes", "no"],
     category: "unknown",
     a: 0,
@@ -671,18 +628,16 @@ const questions = [
   },
   {
     id: 70,
-    q: "Prosaic",
+    q: "Prosaic. Example usage: his prosaic game strategy failed, and his team lost the match.",
     definition: "Lacking imagination; dull.",
-    example: "His prosaic game strategy failed, and his team lost the match.",
     options: ["yes", "no"],
     category: "unknown",
     a: 0,
   },
   {
     id: 71,
-    q: "Scuttle",
+    q: "Scuttle. Example usage: the creeper scuttled towards him in Minecraft.",
     definition: "To move quickly with short steps.",
-    example: "The creeper scuttled towards him in Minecraft.",
     options: ["yes", "no"],
     category: "unknown",
     a: 0,
@@ -925,9 +880,8 @@ const questions = [
 // template
 // {
 //   id: 2,
-//   q: "",
+//   q: "[]. Example usage: ",
 //   definition: "",
-//   example: "",
 //   options: ["yes", "no"],
 // category: "unknown",
 //   a: 0,
